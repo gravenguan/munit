@@ -20,6 +20,24 @@
 
 	<build>
 		<plugins>
+<!-- 			<plugin>
+			    <groupId>org.mule.tools.maven</groupId>
+			    <artifactId>mule-maven-plugin</artifactId>
+			    <version>${mule.maven.plugin.version}</version>
+			    <extensions>true</extensions>
+			    <configuration>
+			        <cloudHubDeployment>
+			            <username>${anypoint.username}</username>
+			            <password>${anypoint.password}</password>
+			            <environment>Production</environment>
+			            <applicationName>${cloudhub.application.name}</applicationName>
+			            <muleVersion>${mule.version}</muleVersion> This is the runtime version as it appears on the CloudHub interface
+			            <properties>
+			                <key>value</key>
+			            </properties>
+			        </cloudHubDeployment>
+			    </configuration>
+			</plugin> -->
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
@@ -28,7 +46,7 @@
 				<configuration>
 				</configuration>
 			</plugin>
-		<plugin>
+			<plugin>
                 <groupId>com.mulesoft.munit.tools</groupId>
                 <artifactId>munit-maven-plugin</artifactId>
                 <version>${munit.version}</version>
@@ -106,6 +124,10 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+	    <pluginRepository>
+	        <id>mule-public</id>
+	        <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+	    </pluginRepository>        
     </pluginRepositories>
 
 </project>
