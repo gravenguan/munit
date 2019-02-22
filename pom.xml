@@ -46,29 +46,29 @@
 				<configuration>
 				</configuration>
 			</plugin>
-			<plugin>
-                <groupId>com.mulesoft.munit.tools</groupId>
-                <artifactId>munit-maven-plugin</artifactId>
-                <version>${munit.version}</version>
-                <executions>
-                    <execution>
-                        <id>test</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>test</goal>
-                            <goal>coverage-report</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <coverage>
-                        <runCoverage>true</runCoverage>
-                        <formats>
-                            <format>html</format>
-                        </formats>
-                    </coverage>
-                </configuration>
-            </plugin>
+<!-- 			<plugin>
+				<groupId>com.mulesoft.munit.tools</groupId>
+				<artifactId>munit-maven-plugin</artifactId>
+				<version>${munit.version}</version>
+				<executions>
+				    <execution>
+					<id>test</id>
+					<phase>test</phase>
+					<goals>
+					    <goal>test</goal>
+					    <goal>coverage-report</goal>
+					</goals>
+				    </execution>
+				</executions>
+				<configuration>
+				    <coverage>
+					<runCoverage>true</runCoverage>
+					<formats>
+					    <format>html</format>
+					</formats>
+				    </coverage>
+				</configuration>
+			    </plugin> -->
         </plugins>
 	</build>
 
@@ -85,19 +85,13 @@
             <version>1.1.2</version>
             <classifier>mule-plugin</classifier>
         </dependency>
-		<dependency>
-            <groupId>com.mulesoft.munit</groupId>
-            <artifactId>munit-runner</artifactId>
-            <version>2.1.4</version>
-            <classifier>mule-plugin</classifier>
-            <scope>test</scope>
-        </dependency>	<dependency>
+<!-- 	<dependency>
             <groupId>com.mulesoft.munit</groupId>
             <artifactId>munit-tools</artifactId>
             <version>2.1.4</version>
             <classifier>mule-plugin</classifier>
             <scope>test</scope>
-        </dependency>
+        </dependency> -->
     </dependencies>
 
 	<repositories>
@@ -113,12 +107,6 @@
             <url>https://repository.mulesoft.org/releases/</url>
             <layout>default</layout>
         </repository>
-	 <repository>
-	    <id>Nexus</id>
-	    <name>Nexus Public Repository</name>
-	    <url>https://repository-master.mulesoft.org/nexus/content/groups/public/</url>
-	    <layout>default</layout>
-	 </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
@@ -129,11 +117,7 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-        </pluginRepository>
-	    <pluginRepository>
-	        <id>mule-public</id>
-	        <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
-	    </pluginRepository>        
+        </pluginRepository>      
     </pluginRepositories>
 
 </project>
